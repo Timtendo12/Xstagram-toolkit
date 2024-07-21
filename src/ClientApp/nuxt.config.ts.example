@@ -1,0 +1,21 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  compatibilityDate: '2024-04-03',
+  devtools: { enabled: true },
+  modules: [
+    "@vite-pwa/nuxt",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/kinde",
+    "@nuxtjs/supabase"
+  ],
+  pwa: {
+    manifest: {
+      name: "",
+      short_name: "",
+      description: "",
+      lang: "en",
+      theme_color: "#FF1515",
+      icons: []
+    }
+  }
+})

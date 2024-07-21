@@ -1,0 +1,9 @@
+{
+  "api_key": "",
+  "database": {
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database": ""
+  }
+}

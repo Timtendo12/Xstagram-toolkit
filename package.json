@@ -1,0 +1,17 @@
+{
+  "name": "xstagram",
+  "version": "1.0.0",
+  "description": "A tool that will automatically post your twitter posts as Instagram posts",
+  "main": "src/main.js",
+  "scripts": {
+    "fe:dev": "cd ./src/ClientApp && npm run dev"
+  },
+  "type": "module",
+  "author": "Tim Slager",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql": "^2.18.1",
+    "rettiwt-api": "^3.1.1"
+  }
+}
