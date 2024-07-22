@@ -13,8 +13,7 @@
 <script setup>
 const client = useKindeClient();
 
-const {data: hasAccess} = await useAsyncData(async () => {
+const { data: hasAccess } = await useAsyncData(async () => {
   return (await client?.getPermission("access")) ?? {};
 });
-
 </script>
