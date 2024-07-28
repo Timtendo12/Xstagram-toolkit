@@ -31,9 +31,9 @@ let apiKey = null;
 
 try {
   apiKey = await rettiwt.auth.login(
-    config.x.email,
-    config.x.username,
-    config.x.password,
+    config.x.authorization.email,
+    config.x.authorization.username,
+    config.x.authorization.password,
   );
   await writeAndUpdateConfig(apiKey);
 } catch (e) {
@@ -44,12 +44,12 @@ try {
 async function writeAndUpdateConfig(apiKey) {
   // now we have the api key, we can get the content of the config file, update it and write it back
   const configPath = path.resolve(__dirname, "../src/config.json");
-  config.api_key = apiKey;
+  config.x.api_key = apiKey;
 
   if (eli) {
-    config.x.email = "";
-    config.x.password = "";
-    config.x.username = "";
+    config.x.authorization.email = "";
+    config.x.authorization.password = "";
+    config.x.authorization.username = "";
   }
 
   try {
@@ -79,15 +79,15 @@ function configValidationCheck() {
     process.exit(1);
   }
 
-  if (!config.x) {
+  if (!config.x.authorization) {
     console.error('config.json is missing "x" object');
     process.exit(1);
   }
 
   if (
-    !config.x.email.length ||
-    !config.x.password.length ||
-    !config.x.username.length
+    !config.x.authorization.email.length ||
+    !config.x.authorization.password.length ||
+    !config.x.authorization.username.length
   ) {
     console.error(
       'config.json is missing "x.email", "x.password" or "x.username" or one of them is empty',

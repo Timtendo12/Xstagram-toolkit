@@ -7,7 +7,7 @@ loadAndRunServices().catch((error) => {
 });
 
 async function loadAndRunServices() {
-  webService.execute().catch((error) => {
+  await webService.execute().catch((error) => {
     console.error(error);
   });
 

@@ -2,17 +2,19 @@ import express from "express";
 const app = express();
 const port = 3000;
 
-export default {
+const vm = {
   name: "Web Service",
   methods: {
-    registerRoutes() {
+    registerWebRoutes() {
       app.get("/", (req, res) => {
         res.send("Hello World!");
       });
     },
+    registerApiRoutes() {},
   },
   async execute() {
-    this.methods.registerRoutes();
+    this.methods.registerWebRoutes();
+    this.methods.registerApiRoutes();
 
     app.listen(port, () => {
       console.log(
@@ -21,3 +23,5 @@ export default {
     });
   },
 };
+
+export default vm;

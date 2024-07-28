@@ -12,6 +12,7 @@ It will send mobile push notifications using pushover
 - [x] User can sign in with X
 - [ ] User can fetch their own posts
 - [ ] User can fetch post of given X Users
+- [ ] Tool can save media from fetched posts and save them in file system
 - [ ] User can repost their X post automatically on Instagram
 - [ ] Tool saves X Posts in database
 - [ ] Tool sends a notification when a new version of an existing post from a Listener can be made
