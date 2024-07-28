@@ -1,14 +1,29 @@
 {
-  "api_key": "",
   "x": {
-    "email": "",
-    "username": "",
-    "password": ""
+    "api_key": "",
+    "authorization": {
+      "email": "",
+      "username": "",
+      "password": ""
+    },
+    "FetchTweets": {
+      "fromUsers": [],
+      "pollingInterval": 60000,
+      "subjects": [],
+      "prompts": {
+        "relevanceCheck": ""
+      }
+    }
   },
   "database": {
     "host": "localhost",
     "user": "root",
     "password": "",
     "database": ""
+  },
+  "openAI": {
+    "enabled": false,
+    "api_key": "",
+    "model": "gpt-4o-mini"
   }
 }
